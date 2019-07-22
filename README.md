@@ -6,7 +6,7 @@ CoreFoundation 以外の UUID の動作をチェック
 
 - 原則、常に同じIDが発行される
   - [Privacy] -> [Advertising] -> [Limit Ad Tracking] を **On** にされると
-　  - 実機： 0埋めIDが返される
+    - 実機： 0埋めIDが返される
     - シミュレータ: 通常のIDが返される
 
 ## UIDevice.current.identifierForVendor?.uuidString
