@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="uuidchecker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nal-06-Hd2">
+                                <rect key="frame" x="152" y="784" width="110" height="30"/>
+                                <state key="normal" title="WebViewへ遷移"/>
+                                <connections>
+                                    <segue destination="Ief-5o-xWg" kind="show" id="s42-Hv-x7j"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UUID 一覧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvZ-kT-WZY">
+                                <rect key="frame" x="8" y="92" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(empty)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnn-ID-VRL">
+                                <rect key="frame" x="8" y="129" width="398" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiK-AE-fMo">
+                                <rect key="frame" x="176" y="746" width="62" height="30"/>
+                                <state key="normal" title="リロード"/>
+                                <connections>
+                                    <action selector="didClickReloadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lYn-UY-TOg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hnn-ID-VRL" secondAttribute="trailing" constant="8" id="5F8-8W-6jg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KvZ-kT-WZY" secondAttribute="trailing" constant="8" id="71h-sY-Wnn"/>
+                            <constraint firstItem="hnn-ID-VRL" firstAttribute="top" secondItem="KvZ-kT-WZY" secondAttribute="bottom" constant="16" id="IFU-nQ-KqR"/>
+                            <constraint firstItem="KvZ-kT-WZY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Rz1-YS-g7E"/>
+                            <constraint firstItem="hnn-ID-VRL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="UJD-LK-Nho"/>
+                            <constraint firstItem="QiK-AE-fMo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cyg-xO-jED"/>
+                            <constraint firstItem="Nal-06-Hd2" firstAttribute="top" secondItem="QiK-AE-fMo" secondAttribute="bottom" constant="8" id="ddX-7m-9cZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nal-06-Hd2" secondAttribute="bottom" constant="48" id="e9L-1w-GEr"/>
+                            <constraint firstItem="Nal-06-Hd2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lVo-xR-fLS"/>
+                            <constraint firstItem="KvZ-kT-WZY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="rz8-s4-xbo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="hnn-ID-VRL" id="Li0-nI-dIF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Title-->
+        <scene sceneID="UhI-jD-f7K">
+            <objects>
+                <viewController id="Ief-5o-xWg" customClass="WebViewViewController" customModule="uuidchecker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Z8-3L-XAi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OfK-Gn-aQ0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="724"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5A-nn-dWv">
+                                <rect key="frame" x="191.5" y="784" width="31" height="30"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="didClickCloseButton:" destination="Ief-5o-xWg" eventType="touchUpInside" id="abF-Mz-WOJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="n5A-nn-dWv" firstAttribute="top" secondItem="OfK-Gn-aQ0" secondAttribute="bottom" constant="16" id="7aZ-aD-OW1"/>
+                            <constraint firstItem="Ac7-NC-Ssn" firstAttribute="trailing" secondItem="OfK-Gn-aQ0" secondAttribute="trailing" id="BHw-wn-YYk"/>
+                            <constraint firstItem="Ac7-NC-Ssn" firstAttribute="bottom" secondItem="n5A-nn-dWv" secondAttribute="bottom" constant="48" id="Xq9-pm-Oev"/>
+                            <constraint firstItem="OfK-Gn-aQ0" firstAttribute="leading" secondItem="Ac7-NC-Ssn" secondAttribute="leading" id="cJT-UY-8pW"/>
+                            <constraint firstItem="OfK-Gn-aQ0" firstAttribute="top" secondItem="Ac7-NC-Ssn" secondAttribute="top" id="tLr-5I-K3F"/>
+                            <constraint firstItem="n5A-nn-dWv" firstAttribute="centerX" secondItem="4Z8-3L-XAi" secondAttribute="centerX" id="y7g-X3-UD5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ac7-NC-Ssn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="yib-Iy-cR3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWD-A0-Ep1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1513" y="19"/>
+        </scene>
+    </scenes>
+</document>
